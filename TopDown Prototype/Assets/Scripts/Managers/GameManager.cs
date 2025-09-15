@@ -5,8 +5,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public GameObject gameoverPanel;
-
 
     void Awake()
     {
@@ -18,14 +16,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    public void Restart()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
-    }
-
-
     public void Play()
     {
         SceneManager.LoadScene(1);
@@ -33,8 +23,22 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        gameoverPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("App Quitting");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
