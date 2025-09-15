@@ -55,6 +55,7 @@ public class Muzzle : MonoBehaviour
 
     public void Shoot()
     {
+        AudioManager.instance.FireSound();
         objectPoolManager.SpawnObjects("Bullet", firePoint.transform.position, firePoint.transform.rotation);     // Spawn a bullet from the pool at the fire point's position and rotation
 
         if (Time.time < nextFire)
