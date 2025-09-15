@@ -223,6 +223,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Muzzle
   firePoint: {fileID: 203845371}
+  weaponName: {fileID: 11400000, guid: daf3c761137850d489acdafd9068ae4c, type: 2}
+  currentweaponIndex: 0
+  weapons:
+  - {fileID: 11400000, guid: daf3c761137850d489acdafd9068ae4c, type: 2}
+  - {fileID: 11400000, guid: 22bf8393a2851764ba5b0ef5b3face4f, type: 2}
 --- !u!1 &443168322
 GameObject:
   m_ObjectHideFlags: 0

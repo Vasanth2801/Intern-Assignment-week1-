@@ -65,13 +65,13 @@ public class PlayerMovement : MonoBehaviour
     //Enabling the input system when the button is enabled
     private void OnEnable()
     {
-        controls.Player.Enable();                                                                        //Enabling the input System
+        controls.Player.Enable();                                                                       //Enabling the input System
     }
 
     //Disabling the input system when the button is disabled
     private void OnDisable()
     {
-        controls.Player.Disable();                                                                     //Disabling the input System
+        controls.Player.Disable();                                                                    //Disabling the input System
     }
 
     //Called at a fixed interval and better for physics calculations
