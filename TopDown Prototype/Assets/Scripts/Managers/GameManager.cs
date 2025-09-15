@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
+    [SerializeField] private GameObject gameOverPanel;
 
     void Awake()
     {
@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
     }
 
     public void MainMenu()

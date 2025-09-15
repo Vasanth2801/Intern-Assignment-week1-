@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerInputHandler controls;                                  //Refrence to the TopDownController input action
     Rigidbody2D rb;                                                                //Rigidbody component
     private Vector2 movement;                                                   // movement vector
+    [SerializeField] private GameObject gameOverPanel;
 
     [Header("Sprinting")]
     bool isSprinting;                                             //Boolean to check if the player is sprinting
@@ -129,6 +130,16 @@ public class PlayerMovement : MonoBehaviour
         {
             isDashing = false;                                        //Setting isDashing to false
             rb.linearVelocity = Vector2.zero;                               //Resetting the velocity of the player
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Enemy"))
+        {
+            gameOverPanel.SetActive(true);
+            Time.timeScale = 0f;
+            Destroy(this);
         }
     }
 
