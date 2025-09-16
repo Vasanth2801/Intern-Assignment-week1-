@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f14ef37533327479a65c15bb6202a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountdownTimer
-  timer: 10
+  timer: 60
   timerText: {fileID: 761786173}
 --- !u!4 &363526894
 Transform:
